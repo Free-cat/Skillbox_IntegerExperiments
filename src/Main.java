@@ -10,8 +10,9 @@ public class Main
     public static Integer sumDigits(Integer number)
     {
         int sum = 0;
-        for (int i = 0; i < number.toString().length(); i++){
-            sum += Character.digit(number.toString().charAt(i), 10);
+        String letters = number.toString();
+        for (int i = 0; i < letters.length(); i++){
+            sum += Character.getNumericValue(letters.charAt(i));
         }
         return sum;
     }
